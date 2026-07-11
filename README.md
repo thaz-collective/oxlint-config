@@ -12,7 +12,7 @@ The purpose of this project is to have a common starting point for linting confi
   vp add -D vite-plus oxlint oxlint-tsgolint @thaz/oxlint-config
   ```
 
-- Update your Vite+ config with the formatting section:
+- Update your Vite+ config with the linting section:
 
   ```ts
   import { defineConfig } from 'vite-plus';
