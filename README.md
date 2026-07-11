@@ -16,7 +16,7 @@ The purpose of this project is to have a common starting point for linting confi
 
   ```ts
   import { defineConfig } from 'vite-plus';
-  import { oxfmtConfig } from '@thaz/oxlint-config';
+  import { nativeConfig } from '@thaz/oxlint-config';
 
   export default defineConfig({
     // Recommended to have a staged step to run fixes
@@ -30,13 +30,16 @@ The purpose of this project is to have a common starting point for linting confi
           command: 'vp check',
         },
         // These can go in package.json or tasks depending on your preference
-        fmt: {
-          command: 'vp fmt',
+        lint: {
+          command: 'vp lint',
         },
       },
     },
     // Config goes here. You can override parts and spread only items you want or whole config as is.
-    fmt: oxfmtConfig,
+    lint: {
+      extends: [nativeConfig],
+      options: { typeAware: true, typeCheck: true },
+    },
   });
   ```
 
@@ -44,4 +47,4 @@ The purpose of this project is to have a common starting point for linting confi
 
 ## References
 
-- [Oxfmt](https://oxc.rs/docs/guide/usage/formatter.html) - The Oxfmt library used for formatting our code
+- [Oxlint](https://oxc.rs/docs/guide/usage/linter.html) - The Oxlint library used for linting our code
