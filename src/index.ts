@@ -22,4 +22,5 @@ export * from './overrides/config-file-config';
 export * from './overrides/library-code-config';
 export * from './overrides/test-file-config';
 
-export * from './full-config';
+export * from './native-config';
+export * from './js-plugin-config';

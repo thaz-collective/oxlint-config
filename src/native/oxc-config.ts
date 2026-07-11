@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for OXC - Error By Default
  */
 export const oxcCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['oxc'],
   rules: {
     // 'oxc/bad-array-method-on-arguments': 'error',
@@ -29,7 +26,6 @@ export const oxcCorrectnessConfig = defineConfig({
 //  * Nursery Rules for OXC - Off By Default
 //  */
 // export const oxcNurseryConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['oxc'],
 //   rules: {},
 // });
@@ -38,7 +34,6 @@ export const oxcCorrectnessConfig = defineConfig({
  * Pedantic Rules for OXC - Off By Default
  */
 export const oxcPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['oxc'],
   rules: {
     'oxc/branches-sharing-code': 'error',
@@ -49,7 +44,6 @@ export const oxcPedanticConfig = defineConfig({
  * Perf Rules for OXC - Error By Default
  */
 export const oxcPerfConfig = defineConfig({
-  ...baseConfig,
   plugins: ['oxc'],
   rules: {
     // 'oxc/no-accumulating-spread': 'off',
@@ -61,7 +55,6 @@ export const oxcPerfConfig = defineConfig({
  * Restriction Rules for OXC - Off By Default
  */
 export const oxcRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['oxc'],
   rules: {
     // 'oxc/bad-bitwise-operator': 'error',
@@ -77,7 +70,6 @@ export const oxcRestrictionConfig = defineConfig({
 //  * Style Rules for OXC - Off By Default
 //  */
 // export const oxcStyleConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['oxc'],
 //   rules: {},
 // });
@@ -86,7 +78,6 @@ export const oxcRestrictionConfig = defineConfig({
  * Suspicious Rules for OXC - Error By Default
  */
 export const oxcSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['oxc'],
   rules: {
     // 'oxc/approx-constant': 'off',
@@ -100,7 +91,6 @@ export const oxcSuspiciousConfig = defineConfig({
  * Rules for OXC
  */
 export const oxcConfig = defineConfig({
-  ...baseConfig,
   plugins: ['oxc'],
   rules: {
     ...oxcCorrectnessConfig.rules,

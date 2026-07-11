@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for React - Error By Default
  */
 export const reactCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     // 'react/exhaustive-deps': 'off',
@@ -35,7 +32,6 @@ export const reactCorrectnessConfig = defineConfig({
  * Nursery Rules for React - Off By Default
  */
 export const reactNurseryConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     // 'react/react-compiler': 'off',
@@ -47,7 +43,6 @@ export const reactNurseryConfig = defineConfig({
  * Pedantic Rules for React - Off By Default
  */
 export const reactPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     'react/checked-requires-onchange-or-readonly': 'error',
@@ -68,7 +63,6 @@ export const reactPedanticConfig = defineConfig({
  * Perf Rules for React - Error By Default
  */
 export const reactPerfConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     // 'react/jsx-no-constructed-context-values': 'off',
@@ -85,7 +79,6 @@ export const reactPerfConfig = defineConfig({
  * Restriction Rules for React - Off By Default
  */
 export const reactRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     'react/button-has-type': 'error',
@@ -118,7 +111,6 @@ export const reactRestrictionConfig = defineConfig({
  * Style Rules for React - Off By Default
  */
 export const reactStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     'react/hook-use-state': 'error',
@@ -148,7 +140,6 @@ export const reactStyleConfig = defineConfig({
  * Suspicious Rules for React - Error By Default
  */
 export const reactSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     // 'react/iframe-missing-sandbox': 'off',
@@ -165,7 +156,6 @@ export const reactSuspiciousConfig = defineConfig({
  * Rules for React
  */
 export const reactConfig = defineConfig({
-  ...baseConfig,
   plugins: ['react', 'react-perf'],
   rules: {
     ...reactCorrectnessConfig.rules,

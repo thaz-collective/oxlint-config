@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for JSDoc - Error By Default
  */
 export const jsdocCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsdoc'],
   rules: {
     // 'jsdoc/check-property-names': 'off',
@@ -25,7 +22,6 @@ export const jsdocCorrectnessConfig = defineConfig({
 //  * Nursery Rules for JSDoc - Off By Default
 //  */
 // export const jsdocNurseryConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsdoc'],
 //   rules: {},
 // });
@@ -34,7 +30,6 @@ export const jsdocCorrectnessConfig = defineConfig({
  * Pedantic Rules for JSDoc - Off By Default
  */
 export const jsdocPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsdoc'],
   rules: {
     // 'jsdoc/require-param': 'off',
@@ -53,7 +48,6 @@ export const jsdocPedanticConfig = defineConfig({
 //  * Perf Rules for JSDoc - Error By Default
 //  */
 // export const jsdocPerfConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsdoc'],
 //   rules: {},
 // });
@@ -62,7 +56,6 @@ export const jsdocPedanticConfig = defineConfig({
  * Restriction Rules for JSDoc - Off By Default
  */
 export const jsdocRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsdoc'],
   rules: {
     'jsdoc/check-access': 'error',
@@ -74,7 +67,6 @@ export const jsdocRestrictionConfig = defineConfig({
  * Style Rules for JSDoc - Off By Default
  */
 export const jsdocStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsdoc'],
   rules: {
     'jsdoc/require-throws-description': 'error',
@@ -86,7 +78,6 @@ export const jsdocStyleConfig = defineConfig({
 //  * Suspicious Rules for JSDoc - Error By Default
 //  */
 // export const jsdocSuspiciousConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsdoc'],
 //   rules: {},
 // });
@@ -95,7 +86,6 @@ export const jsdocStyleConfig = defineConfig({
  * Rules for JSDoc
  */
 export const jsdocConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsdoc'],
   rules: {
     ...jsdocCorrectnessConfig.rules,

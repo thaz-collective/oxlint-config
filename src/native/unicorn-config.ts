@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for Unicorn - Error By Default
  */
 export const unicornCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     // 'unicorn/no-await-in-promise-methods': 'off',
@@ -29,7 +26,6 @@ export const unicornCorrectnessConfig = defineConfig({
  * Nursery Rules for Unicorn - Off By Default
  */
 export const unicornNurseryConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     // 'unicorn/no-useless-iterator-to-array': 'error',
@@ -40,7 +36,6 @@ export const unicornNurseryConfig = defineConfig({
  * Pedantic Rules for Unicorn - Off By Default
  */
 export const unicornPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     'unicorn/consistent-assert': 'error',
@@ -98,7 +93,6 @@ export const unicornPedanticConfig = defineConfig({
  * Perf Rules for Unicorn - Error By Default
  */
 export const unicornPerfConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     // 'unicorn/prefer-array-find': 'off',
@@ -111,7 +105,6 @@ export const unicornPerfConfig = defineConfig({
  * Restriction Rules for Unicorn - Off By Default
  */
 export const unicornRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     // 'unicorn/import-style': 'error',
@@ -135,7 +128,6 @@ export const unicornRestrictionConfig = defineConfig({
  * Style Rules for Unicorn - Off By Default
  */
 export const unicornStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     'unicorn/catch-error-name': 'error',
@@ -194,7 +186,6 @@ export const unicornStyleConfig = defineConfig({
  * Suspicious Rules for Unicorn - Error By Default
  */
 export const unicornSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     // 'unicorn/consistent-function-scoping': 'off',
@@ -214,7 +205,6 @@ export const unicornSuspiciousConfig = defineConfig({
  * Rules for Unicorn
  */
 export const unicornConfig = defineConfig({
-  ...baseConfig,
   plugins: ['unicorn'],
   rules: {
     ...unicornCorrectnessConfig.rules,

@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for Import - Error By Default
  */
 export const importCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['import'],
   rules: {
     // 'import/default': 'off',
@@ -18,7 +15,6 @@ export const importCorrectnessConfig = defineConfig({
  * Nursery Rules for Import - Off By Default
  */
 export const importNurseryConfig = defineConfig({
-  ...baseConfig,
   plugins: ['import'],
   rules: {
     // 'import/export': 'error',
@@ -30,7 +26,6 @@ export const importNurseryConfig = defineConfig({
  * Pedantic Rules for Import - Off By Default
  */
 export const importPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['import'],
   rules: {
     // 'import/max-dependencies': 'error',
@@ -41,7 +36,6 @@ export const importPedanticConfig = defineConfig({
 //  * Perf Rules for Import - Error By Default
 //  */
 // export const importPerfConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['import'],
 //   rules: {},
 // });
@@ -50,7 +44,6 @@ export const importPedanticConfig = defineConfig({
  * Restriction Rules for Import - Off By Default
  */
 export const importRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['import'],
   rules: {
     // 'import/extensions': 'off',
@@ -69,7 +62,6 @@ export const importRestrictionConfig = defineConfig({
  * Style Rules for Import - Off By Default
  */
 export const importStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['import'],
   rules: {
     'import/consistent-type-specifier-style': ['error', 'prefer-top-level'],
@@ -92,7 +84,6 @@ export const importStyleConfig = defineConfig({
  * Suspicious Rules for Import - Error By Default
  */
 export const importSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['import'],
   rules: {
     'import/no-absolute-path': 'error',
@@ -113,7 +104,6 @@ export const importSuspiciousConfig = defineConfig({
  * Rules for Import
  */
 export const importConfig = defineConfig({
-  ...baseConfig,
   plugins: ['import'],
   rules: {
     ...importCorrectnessConfig.rules,

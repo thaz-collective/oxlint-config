@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for Promise - Error By Default
  */
 export const promiseCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['promise'],
   rules: {
     // 'promise/no-callback-in-promise': 'off',
@@ -20,7 +17,6 @@ export const promiseCorrectnessConfig = defineConfig({
 //  * Nursery Rules for Promise - Off By Default
 //  */
 export const promiseNurseryConfig = defineConfig({
-  ...baseConfig,
   plugins: ['promise'],
   rules: {
     // 'promise/no-return-in-finally': 'off',
@@ -31,7 +27,6 @@ export const promiseNurseryConfig = defineConfig({
 //  * Pedantic Rules for Promise - Off By Default
 //  */
 // export const promisePedanticConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['promise'],
 //   rules: {},
 // });
@@ -40,7 +35,6 @@ export const promiseNurseryConfig = defineConfig({
 //  * Perf Rules for Promise - Error By Default
 //  */
 // export const promisePerfConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['promise'],
 //   rules: {},
 // });
@@ -49,7 +43,6 @@ export const promiseNurseryConfig = defineConfig({
  * Restriction Rules for Promise - Off By Default
  */
 export const promiseRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['promise'],
   rules: {
     'promise/catch-or-return': 'error',
@@ -61,7 +54,6 @@ export const promiseRestrictionConfig = defineConfig({
  * Style Rules for Promise - Off By Default
  */
 export const promiseStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['promise'],
   rules: {
     'promise/avoid-new': 'error',
@@ -83,7 +75,6 @@ export const promiseStyleConfig = defineConfig({
  * Suspicious Rules for Promise - Error By Default
  */
 export const promiseSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['promise'],
   rules: {
     // 'promise/always-return': 'off',
@@ -96,7 +87,6 @@ export const promiseSuspiciousConfig = defineConfig({
  * Rules for Promise
  */
 export const promiseConfig = defineConfig({
-  ...baseConfig,
   plugins: ['promise'],
   rules: {
     ...promiseCorrectnessConfig.rules,

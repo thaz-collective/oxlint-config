@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 // /**
 //  * Correctness Rules for Node - Error By Default
 //  */
 // export const nodeCorrectnessConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['node'],
 //   rules: {},
 // });
@@ -15,7 +12,6 @@ import { baseConfig } from '#src/base-config';
 //  * Nursery Rules for Node - Off By Default
 //  */
 // export const nodeNurseryConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['node'],
 //   rules: {},
 // });
@@ -24,7 +20,6 @@ import { baseConfig } from '#src/base-config';
 //  * Pedantic Rules for Node - Off By Default
 //  */
 // export const nodePedanticConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['node'],
 //   rules: {},
 // });
@@ -33,7 +28,6 @@ import { baseConfig } from '#src/base-config';
 //  * Perf Rules for Node - Error By Default
 //  */
 // export const nodePerfConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['node'],
 //   rules: {},
 // });
@@ -42,7 +36,6 @@ import { baseConfig } from '#src/base-config';
  * Restriction Rules for Node - Off By Default
  */
 export const nodeRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['node'],
   rules: {
     // 'node/handle-callback-err': 'error',
@@ -56,7 +49,6 @@ export const nodeRestrictionConfig = defineConfig({
  * Style Rules for Node - Off By Default
  */
 export const nodeStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['node'],
   rules: {
     // 'node/callback-return': 'error',
@@ -71,7 +63,6 @@ export const nodeStyleConfig = defineConfig({
 //  * Suspicious Rules for Node - Error By Default
 //  */
 // export const nodeSuspiciousConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['node'],
 //   rules: {},
 // });
@@ -80,7 +71,6 @@ export const nodeStyleConfig = defineConfig({
  * Rules for Node
  */
 export const nodeConfig = defineConfig({
-  ...baseConfig,
   plugins: ['node'],
   rules: {
     // No rules in this category

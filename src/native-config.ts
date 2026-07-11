@@ -1,11 +1,6 @@
 import { defineConfig } from 'oxlint';
 
 import { baseConfig } from './base-config';
-import { jsPluginReactHooksExtraConfig } from './js-plugin/js-plugin-react-hooks-extra';
-import { jsPluginReactNamingConventionConfig } from './js-plugin/js-plugin-react-naming-convention';
-import { jsPluginReactWebAPIConfig } from './js-plugin/js-plugin-react-web-api';
-import { jsPluginTanStackQueryConfig } from './js-plugin/js-plugin-tanstack-query';
-import { jsPluginTanStackRouterConfig } from './js-plugin/js-plugin-tanstack-router';
 import { eslintConfig } from './native/eslint-config';
 import { importConfig } from './native/import-config';
 import { jsdocConfig } from './native/jsdoc-config';
@@ -20,7 +15,7 @@ import { configFileConfig } from './overrides/config-file-config';
 import { libraryCodeConfig } from './overrides/library-code-config';
 import { testFileConfig } from './overrides/test-file-config';
 
-export const fullConfig = defineConfig({
+export const nativeConfig = defineConfig({
   ...baseConfig,
   plugins: [
     ...eslintConfig.plugins,
@@ -34,13 +29,6 @@ export const fullConfig = defineConfig({
     ...typeScriptConfig.plugins,
     ...unicornConfig.plugins,
   ],
-  jsPlugins: [
-    ...jsPluginReactHooksExtraConfig.jsPlugins,
-    ...jsPluginReactNamingConventionConfig.jsPlugins,
-    ...jsPluginReactWebAPIConfig.jsPlugins,
-    ...jsPluginTanStackQueryConfig.jsPlugins,
-    ...jsPluginTanStackRouterConfig.jsPlugins,
-  ],
   rules: {
     ...eslintConfig.rules,
     ...importConfig.rules,
@@ -52,12 +40,6 @@ export const fullConfig = defineConfig({
     ...reactConfig.rules,
     ...typeScriptConfig.rules,
     ...unicornConfig.rules,
-
-    ...jsPluginReactHooksExtraConfig.rules,
-    ...jsPluginReactNamingConventionConfig.rules,
-    ...jsPluginReactWebAPIConfig.rules,
-    ...jsPluginTanStackQueryConfig.rules,
-    ...jsPluginTanStackRouterConfig.rules,
   },
   overrides: [...configFileConfig.overrides, ...libraryCodeConfig.overrides, ...testFileConfig.overrides],
 });

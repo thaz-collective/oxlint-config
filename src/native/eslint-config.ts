@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for ESLint - Error By Default
  */
 export const eslintCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     // 'eslint/constructor-super': 'off',
@@ -72,7 +69,6 @@ export const eslintCorrectnessConfig = defineConfig({
  * Nursery Rules for ESLint - Off By Default
  */
 export const eslintNurseryConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     // 'eslint/no-restricted-exports': 'off',
@@ -86,7 +82,6 @@ export const eslintNurseryConfig = defineConfig({
  * Pedantic Rules for ESLint - Off By Default
  */
 export const eslintPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     'eslint/accessor-pairs': 'error',
@@ -130,7 +125,6 @@ export const eslintPedanticConfig = defineConfig({
  * Perf Rules for ESLint - Error By Default
  */
 export const eslintPerfConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     // 'eslint/no-await-in-loop': 'off',
@@ -142,7 +136,6 @@ export const eslintPerfConfig = defineConfig({
  * Restriction Rules for ESLint - Off By Default
  */
 export const eslintRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     // 'eslint/class-methods-use-this': 'error',
@@ -176,7 +169,6 @@ export const eslintRestrictionConfig = defineConfig({
  * Style Rules for ESLint - Off By Default
  */
 export const eslintStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     // 'eslint/arrow-body-style': ['error', 'always'],
@@ -255,7 +247,6 @@ export const eslintStyleConfig = defineConfig({
  * Suspicious Rules for ESLint - Error By Default
  */
 export const eslintSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     // 'eslint/block-scoped-var': 'off',
@@ -278,7 +269,6 @@ export const eslintSuspiciousConfig = defineConfig({
  * Rules for ESLint
  */
 export const eslintConfig = defineConfig({
-  ...baseConfig,
   plugins: ['eslint'],
   rules: {
     ...eslintCorrectnessConfig.rules,

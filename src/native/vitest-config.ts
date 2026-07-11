@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for Vitest - Error By Default
  */
 export const vitestCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['vitest'],
   rules: {
     // 'vitest/expect-expect': 'off',
@@ -38,7 +35,6 @@ export const vitestCorrectnessConfig = defineConfig({
 //  * Nursery Rules for Vitest - Off By Default
 //  */
 // export const vitestNurseryConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['vitest'],
 //   rules: {},
 // });
@@ -47,7 +43,6 @@ export const vitestCorrectnessConfig = defineConfig({
  * Pedantic Rules for Vitest - Off By Default
  */
 export const vitestPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['vitest'],
   rules: {
     'vitest/no-conditional-in-test': 'error',
@@ -58,7 +53,6 @@ export const vitestPedanticConfig = defineConfig({
 //  * Perf Rules for Vitest - Error By Default
 //  */
 // export const vitestPerfConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['vitest'],
 //   rules: {},
 // });
@@ -67,7 +61,6 @@ export const vitestPedanticConfig = defineConfig({
  * Restriction Rules for Vitest - Off By Default
  */
 export const vitestRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['vitest'],
   rules: {
     // 'vitest/require-test-timeout': 'error',
@@ -78,7 +71,6 @@ export const vitestRestrictionConfig = defineConfig({
  * Style Rules for Vitest - Off By Default
  */
 export const vitestStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['vitest'],
   rules: {
     'vitest/consistent-each-for': 'error',
@@ -145,7 +137,6 @@ export const vitestStyleConfig = defineConfig({
  * Suspicious Rules for Vitest - Error By Default
  */
 export const vitestSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['vitest'],
   rules: {
     // 'vitest/no-commented-out-tests': 'off',
@@ -156,7 +147,6 @@ export const vitestSuspiciousConfig = defineConfig({
  * Rules for Vitest
  */
 export const vitestConfig = defineConfig({
-  ...baseConfig,
   plugins: ['vitest'],
   rules: {
     ...vitestCorrectnessConfig.rules,

@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for jsx-a11y - Error By Default
  */
 export const jsxA11yCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsx-a11y'],
   rules: {
     // 'jsx-a11y/alt-text': 'off',
@@ -51,7 +48,6 @@ export const jsxA11yCorrectnessConfig = defineConfig({
 //  * Nursery Rules for jsx-a11y - Off By Default
 //  */
 // export const jsxA11yNurseryConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsx-a11y'],
 //   rules: {},
 // });
@@ -60,7 +56,6 @@ export const jsxA11yCorrectnessConfig = defineConfig({
 //  * Pedantic Rules for jsx-a11y - Off By Default
 //  */
 // export const jsxA11yPedanticConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsx-a11y'],
 //   rules: {},
 // });
@@ -69,7 +64,6 @@ export const jsxA11yCorrectnessConfig = defineConfig({
 //  * Perf Rules for jsx-a11y - Error By Default
 //  */
 // export const jsxA11yPerfConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsx-a11y'],
 //   rules: {},
 // });
@@ -78,7 +72,6 @@ export const jsxA11yCorrectnessConfig = defineConfig({
  * Restriction Rules for jsx-a11y - Off By Default
  */
 export const jsxA11yRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsx-a11y'],
   rules: {
     // 'jsx-a11y/anchor-ambiguous-text': 'error',
@@ -89,7 +82,6 @@ export const jsxA11yRestrictionConfig = defineConfig({
 //  * Style Rules for jsx-a11y - Off By Default
 //  */
 // export const jsxA11yStyleConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsx-a11y'],
 //   rules: {},
 // });
@@ -98,7 +90,6 @@ export const jsxA11yRestrictionConfig = defineConfig({
 //  * Suspicious Rules for jsx-a11y - Error By Default
 //  */
 // export const jsxA11ySuspiciousConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['jsx-a11y'],
 //   rules: {},
 // });
@@ -107,7 +98,6 @@ export const jsxA11yRestrictionConfig = defineConfig({
  * Rules for jsx-a11y
  */
 export const jsxA11yConfig = defineConfig({
-  ...baseConfig,
   plugins: ['jsx-a11y'],
   rules: {
     ...jsxA11yCorrectnessConfig.rules,

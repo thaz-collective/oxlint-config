@@ -1,12 +1,9 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 /**
  * Correctness Rules for TypeScript - Error By Default
  */
 export const typeScriptCorrectnessConfig = defineConfig({
-  ...baseConfig,
   plugins: ['typescript'],
   rules: {
     // 'typescript/await-thenable': 'off',
@@ -43,7 +40,6 @@ export const typeScriptCorrectnessConfig = defineConfig({
  * Nursery Rules for TypeScript - Off By Default
  */
 export const typeScriptNurseryConfig = defineConfig({
-  ...baseConfig,
   plugins: ['typescript'],
   rules: {
     // 'typescript/no-unnecessary-condition': 'off',
@@ -55,7 +51,6 @@ export const typeScriptNurseryConfig = defineConfig({
  * Pedantic Rules for TypeScript - Off By Default
  */
 export const typeScriptPedanticConfig = defineConfig({
-  ...baseConfig,
   plugins: ['typescript'],
   rules: {
     'typescript/ban-ts-comment': [
@@ -115,7 +110,6 @@ export const typeScriptPedanticConfig = defineConfig({
 //  * Perf Rules for TypeScript - Error By Default
 //  */
 // export const typeScriptPerfConfig = defineConfig({
-//   ...baseConfig,
 //   plugins: ['typescript'],
 //   rules: {},
 // });
@@ -124,7 +118,6 @@ export const typeScriptPedanticConfig = defineConfig({
  * Restriction Rules for TypeScript - Off By Default
  */
 export const typeScriptRestrictionConfig = defineConfig({
-  ...baseConfig,
   plugins: ['typescript'],
   rules: {
     // 'typescript/explicit-function-return-type': 'error',
@@ -152,7 +145,6 @@ export const typeScriptRestrictionConfig = defineConfig({
  * Style Rules for TypeScript - Off By Default
  */
 export const typeScriptStyleConfig = defineConfig({
-  ...baseConfig,
   plugins: ['typescript'],
   rules: {
     'typescript/adjacent-overload-signatures': 'error',
@@ -197,7 +189,6 @@ export const typeScriptStyleConfig = defineConfig({
  * Suspicious Rules for TypeScript - Error By Default
  */
 export const typeScriptSuspiciousConfig = defineConfig({
-  ...baseConfig,
   plugins: ['typescript'],
   rules: {
     // 'typescript/consistent-return': 'off',
@@ -219,7 +210,6 @@ export const typeScriptSuspiciousConfig = defineConfig({
  * Rules for TypeScript
  */
 export const typeScriptConfig = defineConfig({
-  ...baseConfig,
   plugins: ['typescript'],
   rules: {
     ...typeScriptCorrectnessConfig.rules,

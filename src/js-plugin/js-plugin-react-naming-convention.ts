@@ -1,9 +1,6 @@
 import { defineConfig } from 'oxlint';
 
-import { baseConfig } from '#src/base-config';
-
 export const jsPluginReactNamingConventionConfig = defineConfig({
-  ...baseConfig,
   jsPlugins: [
     {
       name: 'js-plugin-react-naming-convention',
