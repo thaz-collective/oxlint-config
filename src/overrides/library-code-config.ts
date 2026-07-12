@@ -2,6 +2,9 @@ import { defineConfig } from 'oxlint';
 
 export const libraryCodeConfigRules = defineConfig({
   rules: {
+    // In library code we may need default exports for other libraries
+    'import/no-default-export': 'off',
+
     // In library code we need type assertions
     'typescript/consistent-type-assertions': 'off',
 
