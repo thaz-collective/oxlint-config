@@ -20,6 +20,7 @@ export * from './js-plugin/js-plugin-tanstack-router';
 
 export * from './overrides/config-file-config';
 export * from './overrides/library-code-config';
+export * from './overrides/routes-file-config';
 export * from './overrides/test-file-config';
 
 export * from './native-config';

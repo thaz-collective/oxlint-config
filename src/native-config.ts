@@ -13,10 +13,12 @@ import { typeScriptConfig } from './native/typescript-config';
 import { unicornConfig } from './native/unicorn-config';
 import { configFileConfig } from './overrides/config-file-config';
 import { libraryCodeConfig } from './overrides/library-code-config';
+import { routesFileConfig } from './overrides/routes-file-config';
 import { testFileConfig } from './overrides/test-file-config';
 
 export const nativeConfig = defineConfig({
   ...baseConfig,
+  ignorePatterns: ['**/route-tree.gen.ts', '**/.content-collections/**'],
   plugins: [
     ...eslintConfig.plugins,
     ...importConfig.plugins,
@@ -41,5 +43,10 @@ export const nativeConfig = defineConfig({
     ...typeScriptConfig.rules,
     ...unicornConfig.rules,
   },
-  overrides: [...configFileConfig.overrides, ...libraryCodeConfig.overrides, ...testFileConfig.overrides],
+  overrides: [
+    ...configFileConfig.overrides,
+    ...libraryCodeConfig.overrides,
+    ...testFileConfig.overrides,
+    ...routesFileConfig.overrides,
+  ],
 });
