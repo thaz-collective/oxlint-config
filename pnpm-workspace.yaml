@@ -3,13 +3,13 @@ blockExoticSubdeps: true
 catalog:
   '@thaz/oxfmt-config': 1.0.0-rc.1
   '@thaz/typescript-config': 1.0.0-rc.1
-  '@types/node': 24.13.2
-  oxlint: 1.72.0
-  oxlint-tsgolint: 0.24.0
+  '@types/node': 24.13.3
+  oxlint: 1.77.0
+  oxlint-tsgolint: 7.0.2001
   typescript: 6.0.3
-  vite: npm:@voidzero-dev/vite-plus-core@0.2.4
+  vite: npm:@voidzero-dev/vite-plus-core@0.2.9
   vite-plugin-externalize-deps: 0.10.0
-  vite-plus: 0.2.4
+  vite-plus: 0.2.9
 
 catalogMode: prefer
 # Watch this issue: https://github.com/pnpm/pnpm/issues/11238
@@ -18,6 +18,16 @@ minimumReleaseAge: 4320 # 3 days just to be safe with the uptick of supply chain
 minimumReleaseAgeExclude:
   - '@thaz/typescript-config@1.0.0-rc.1'
   - '@thaz/oxfmt-config@1.0.0-rc.1'
+  - '@voidzero-dev/vite-plus-core@0.2.9'
+  - '@voidzero-dev/vite-plus-darwin-arm64@0.2.9'
+  - '@voidzero-dev/vite-plus-darwin-x64@0.2.9'
+  - '@voidzero-dev/vite-plus-linux-arm64-gnu@0.2.9'
+  - '@voidzero-dev/vite-plus-linux-arm64-musl@0.2.9'
+  - '@voidzero-dev/vite-plus-linux-x64-gnu@0.2.9'
+  - '@voidzero-dev/vite-plus-linux-x64-musl@0.2.9'
+  - '@voidzero-dev/vite-plus-win32-arm64-msvc@0.2.9'
+  - '@voidzero-dev/vite-plus-win32-x64-msvc@0.2.9'
+  - vite-plus@0.2.9
 
 overrides:
   vite: 'catalog:'
