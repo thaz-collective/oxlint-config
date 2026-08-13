@@ -5,6 +5,7 @@ import { vitestConfig } from '#src/native/vitest-config';
 export const testFileConfigRules = defineConfig({
   rules: {
     ...vitestConfig.rules,
+    'eslint/no-empty-pattern': 'off',
     'import/no-default-export': 'off',
     'promise/avoid-new': 'off',
     'typescript/no-unsafe-argument': 'off',
